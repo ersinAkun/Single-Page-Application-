@@ -5,6 +5,7 @@
     --color4: rgba(255, 88, 158, 0.5);
     --color5: rgb(237, 237, 237);
     --color6: rgb(157, 157, 157);
+    --color7: rgb(33, 33, 33);
 }
 /************************* COMMON *************************/
 body{
@@ -37,6 +38,19 @@ body{
     border:0;
     box-shadow: 0 0 10px var(--color5);
     padding: 2rem 1rem;
+}
+.section-header{
+    margin:0 auto;
+    margin-bottom: 3rem;
+    width:60%;
+    
+}
+.section-header h3{
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.section-header.light{
+    color: var(--color5);
 }
 /************************* NAVBAR *************************/
 nav.main-navbar{
@@ -128,5 +142,23 @@ Biz aynısını kullanarak bootstrap stilini ezdik
     color: var(--color6);
     letter-spacing: 0.1rem;
 }
-
-
+/************************* WORK PROCESS *************************/
+.work-process{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-align: center;
+    position: relative;
+    background-image: url("../img/banner-01.jpg");
+    margin-top:5rem;
+}
+.work-process::after{
+    content: "";
+    background-image: linear-gradient(30deg, var(--color4), var(--color3));
+    position: absolute;
+    top:0; left:0; right:0; bottom: 0;
+    z-index: 1;
+}
+.work-process > .container{
+    position: relative;
+    z-index: 2;
+}
